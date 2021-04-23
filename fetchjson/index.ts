@@ -13,10 +13,13 @@ axios.get(url).then((res) => {
   const id = user.id;
   const email = user.email;
   const name = user.first_name;
-
-  console.log(`
-    my id is: ${id}
-    my email is: ${email}
-    my name is: ${name}
-  `);
+  logUserInfo(id, email, name);
 });
+
+const logUserInfo = (id: number, email: string, name: string) => {
+  console.log(`
+  my id is: ${id}
+  my email is: ${email}
+  my name is: ${name}
+`);
+}
