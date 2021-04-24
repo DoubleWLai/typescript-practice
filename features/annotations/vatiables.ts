@@ -38,3 +38,13 @@ words.forEach((i) => {
     wordFound = true;
   }
 });
+
+
+const numbers = [1, 2, -10, -14];
+let numberAboveZero: boolean | number = false;
+
+numbers.forEach((i) => {
+  if (i > 0) {
+    numberAboveZero = i;
+  }
+});
