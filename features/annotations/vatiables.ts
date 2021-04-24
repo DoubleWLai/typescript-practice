@@ -24,3 +24,9 @@ let point: { x: number; y: number } = {
 let logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+const json = '{"x": 10, "y": 20}';
+const coordinates: { x: number; y: number } = JSON.parse(json); // The type of coordinates is 'any' because TS can't predit the type return by JSON.parse
+console.log(coordinates);
+
+
