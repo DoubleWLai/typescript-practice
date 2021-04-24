@@ -8,3 +8,9 @@ let now: Date = new Date();
 let colors: string[] = ['red', 'blue', 'green'];
 let myNumbers: number[] = [1, 2, 3];
 let truths: boolean[] = [true, false];
+
+class Car {
+
+}
+
+let car: Car = new Car();
