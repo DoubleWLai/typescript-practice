@@ -30,3 +30,11 @@ const coordinates: { x: number; y: number } = JSON.parse(json); // The type of c
 console.log(coordinates);
 
 
+const words = ['blue', 'green', 'red'];
+let wordFound: boolean;
+
+words.forEach((i) => {
+  if (i === 'red') {
+    wordFound = true;
+  }
+});
