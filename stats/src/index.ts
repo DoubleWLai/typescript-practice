@@ -9,11 +9,12 @@ const matches = fs
     return row.split(',');
   });
 
-// but still not clear because object in js has other purpose
-const MatchResult = {
-  HomeWin: 'H',
-  AwayWin: 'A',
-  Draw: 'D',
+// enum is the best practice right here
+// the significance of enum is just signal other developers
+enum MatchResult {
+  HomeWin = 'H',
+  AwayWin = 'A',
+  Draw = 'D',
 };
 
 
