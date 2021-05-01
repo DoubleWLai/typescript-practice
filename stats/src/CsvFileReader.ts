@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { dateStringToDate } from './utils';
+import { MatchResult } from './MatchResults';
 
 export class CsvFileReader {
   data: string[][] = [];
@@ -22,6 +23,7 @@ export class CsvFileReader {
           row[2],
           parseInt(row[3]),
           parseInt(row[4]),
+          row[5] as MatchResult, // 'as' used to tell TS we know what the type should be at here.
         ]
       });
   }

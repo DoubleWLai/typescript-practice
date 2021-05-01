@@ -1,17 +1,12 @@
 import { CsvFileReader } from './CsvFileReader';
+import { MatchResult } from './MatchResults';
 
 const reader = new CsvFileReader('football.csv');
 reader.read();
 
 
 
-// enum is the best practice right here
-// the significance of enum is just signal other developers
-enum MatchResult {
-  HomeWin = 'H',
-  AwayWin = 'A',
-  Draw = 'D',
-};
+
 
 
 let manUnitedWins = 0;
