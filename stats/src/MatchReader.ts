@@ -1,7 +1,8 @@
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResults';
+import { MatchData } from './MatchData';
 
-type MatchData = [Date, string, string, number, number, MatchResult, string];
+
 
 
 interface DataReader {
