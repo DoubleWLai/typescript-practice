@@ -12,19 +12,12 @@ export interface OutputTarget {
 
 export class Summary {
   static winsAnalysisWithHtmlReport(team: string): Summary {
-    return new Summary(
-      new WinsAnalysis(team),
-      new HtmlReport(),
-    );
+    return new Summary(new WinsAnalysis(team), new HtmlReport());
   }
 
-
-  constructor(
-    public analyzer: Analyzer,
-    public outputTarget: OutputTarget,
-  ) {};
+  constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {}
 
   buildAndPrintReport(matches: MatchData[]): void {
     this.outputTarget.print(this.analyzer.run(matches));
-  };
+  }
 }
