@@ -7,11 +7,11 @@ user.on('sss', () => {
 });
 
 user.on('sss', () => {
-  console.log(111);
+  console.log(222);
 });
 
-user.on('ssaaas', () => {
-  console.log(111);
+user.on('aaa', () => {
+  console.log(333);
 });
 
-console.log(user);
+user.trigger('sss');
