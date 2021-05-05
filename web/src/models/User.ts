@@ -39,7 +39,7 @@ export class User {
     });
   }
 
-  async fetch(): void {
+  async fetch(): Promise<void> {
     try {
       const res: AxiosResponse = await axios.get(
         `http://localhost:3000/users/${this.get('id')}`
