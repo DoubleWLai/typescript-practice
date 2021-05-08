@@ -47,4 +47,13 @@ export class User {
     const res: AxiosResponse = await this.sync.fetch(id);
     this.set(res.data);
   }
+
+  async save(): Promise<void> {
+    try {
+      await this.sync.save(this.attributes.getAll());
+      this.trigger('save');
+    } catch (e) {
+      this.trigger('error');
+    }
+  }
 }
