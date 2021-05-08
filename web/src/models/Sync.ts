@@ -12,8 +12,9 @@ export class Sync<T extends HasId> {
   }
 
   save(data: T): AxiosPromise {
-    if (data.id) {
-      return axios.put(`${this.rootUrl}/${data.id}`, data);
+    const { id } = data;
+    if (id) {
+      return axios.put(`${this.rootUrl}/${id}`, data);
     } else {
       return axios.post(`${this.rootUrl}`, data);
     }
